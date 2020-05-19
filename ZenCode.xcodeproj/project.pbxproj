@@ -21,7 +21,7 @@
 		BDFE8A3924742BDB00E86A4C /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3824742BDB00E86A4C /* WordController.swift */; };
 		BDFE8A3B24742C0000E86A4C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3A24742C0000E86A4C /* String+Extensions.swift */; };
 		BDFE8A4024743C9600E86A4C /* SmartSortCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */; };
-		BDFE8A4224743CBA00E86A4C /* SelectLineContents.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A4124743CBA00E86A4C /* SelectLineContents.swift */; };
+		BDFE8A4224743CBA00E86A4C /* SelectLineContentsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +68,7 @@
 		BDFE8A3824742BDB00E86A4C /* WordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
 		BDFE8A3A24742C0000E86A4C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSortCommand.swift; sourceTree = "<group>"; };
-		BDFE8A4124743CBA00E86A4C /* SelectLineContents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLineContents.swift; sourceTree = "<group>"; };
+		BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLineContentsCommand.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,7 +158,7 @@
 				BDA96B9D2472FFB800565AA2 /* SelectNextWordCommand.swift */,
 				BD292B6624742CA4005A2F3C /* SelectPreviousWordCommand.swift */,
 				BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */,
-				BDFE8A4124743CBA00E86A4C /* SelectLineContents.swift */,
+				BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -291,7 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDFE8A3B24742C0000E86A4C /* String+Extensions.swift in Sources */,
-				BDFE8A4224743CBA00E86A4C /* SelectLineContents.swift in Sources */,
+				BDFE8A4224743CBA00E86A4C /* SelectLineContentsCommand.swift in Sources */,
 				BD292B6524742B53005A2F3C /* Character+Extensions.swift in Sources */,
 				BD292B6724742CA4005A2F3C /* SelectPreviousWordCommand.swift in Sources */,
 				BDA96B9C2472FFB800565AA2 /* SourceEditorExtension.swift in Sources */,

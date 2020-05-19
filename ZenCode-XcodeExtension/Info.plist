@@ -46,9 +46,9 @@
         </dict>
         <dict>
           <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).SelectLineContents</string>
+          <string>$(PRODUCT_MODULE_NAME).SelectLineContentsCommand</string>
           <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectLineContents</string>
+          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectLineContentsCommand</string>
           <key>XCSourceEditorCommandName</key>
           <string>- Select Line Contents</string>
         </dict>

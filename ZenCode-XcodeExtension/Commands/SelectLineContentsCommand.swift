@@ -1,3 +1,4 @@
+import Foundation
 import XcodeKit
 
 class SelectLineContentsCommand : NSObject, XCSourceEditorCommand {
