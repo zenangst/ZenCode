@@ -18,6 +18,11 @@
 		BDA96B9C2472FFB800565AA2 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B9B2472FFB800565AA2 /* SourceEditorExtension.swift */; };
 		BDA96B9E2472FFB800565AA2 /* SelectNextWordCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B9D2472FFB800565AA2 /* SelectNextWordCommand.swift */; };
 		BDA96BA32472FFB800565AA2 /* ZenCode-XcodeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDA96B962472FFB800565AA2 /* ZenCode-XcodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BDEBA6A82474F17600EFA5B9 /* SelectWordAboveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6A72474F17600EFA5B9 /* SelectWordAboveCommand.swift */; };
+		BDEBA6AA2474F1A500EFA5B9 /* SelectWordBelowCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6A92474F1A500EFA5B9 /* SelectWordBelowCommand.swift */; };
+		BDEBA6AC2474F1B700EFA5B9 /* DuplicateLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AB2474F1B700EFA5B9 /* DuplicateLineCommand.swift */; };
+		BDEBA6AE2474F1D700EFA5B9 /* DeleteLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AD2474F1D700EFA5B9 /* DeleteLineCommand.swift */; };
+		BDEBA6B02474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AF2474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift */; };
 		BDFE8A3924742BDB00E86A4C /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3824742BDB00E86A4C /* WordController.swift */; };
 		BDFE8A3B24742C0000E86A4C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3A24742C0000E86A4C /* String+Extensions.swift */; };
 		BDFE8A4024743C9600E86A4C /* SmartSortCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */; };
@@ -65,6 +70,11 @@
 		BDA96B9D2472FFB800565AA2 /* SelectNextWordCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNextWordCommand.swift; sourceTree = "<group>"; };
 		BDA96B9F2472FFB800565AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA96BA02472FFB800565AA2 /* ZenCode_XcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZenCode_XcodeExtension.entitlements; sourceTree = "<group>"; };
+		BDEBA6A72474F17600EFA5B9 /* SelectWordAboveCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWordAboveCommand.swift; sourceTree = "<group>"; };
+		BDEBA6A92474F1A500EFA5B9 /* SelectWordBelowCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectWordBelowCommand.swift; sourceTree = "<group>"; };
+		BDEBA6AB2474F1B700EFA5B9 /* DuplicateLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateLineCommand.swift; sourceTree = "<group>"; };
+		BDEBA6AD2474F1D700EFA5B9 /* DeleteLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLineCommand.swift; sourceTree = "<group>"; };
+		BDEBA6AF2474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToEOLAndInsertLFCommand.swift; sourceTree = "<group>"; };
 		BDFE8A3824742BDB00E86A4C /* WordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
 		BDFE8A3A24742C0000E86A4C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSortCommand.swift; sourceTree = "<group>"; };
@@ -155,10 +165,15 @@
 		BDFE8A3C24743C3100E86A4C /* Commands */ = {
 			isa = PBXGroup;
 			children = (
+				BDEBA6AD2474F1D700EFA5B9 /* DeleteLineCommand.swift */,
+				BDEBA6AB2474F1B700EFA5B9 /* DuplicateLineCommand.swift */,
+				BDEBA6AF2474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift */,
+				BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */,
 				BDA96B9D2472FFB800565AA2 /* SelectNextWordCommand.swift */,
 				BD292B6624742CA4005A2F3C /* SelectPreviousWordCommand.swift */,
+				BDEBA6A72474F17600EFA5B9 /* SelectWordAboveCommand.swift */,
+				BDEBA6A92474F1A500EFA5B9 /* SelectWordBelowCommand.swift */,
 				BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */,
-				BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -290,7 +305,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDEBA6AE2474F1D700EFA5B9 /* DeleteLineCommand.swift in Sources */,
+				BDEBA6AC2474F1B700EFA5B9 /* DuplicateLineCommand.swift in Sources */,
 				BDFE8A3B24742C0000E86A4C /* String+Extensions.swift in Sources */,
+				BDEBA6AA2474F1A500EFA5B9 /* SelectWordBelowCommand.swift in Sources */,
+				BDEBA6B02474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift in Sources */,
 				BDFE8A4224743CBA00E86A4C /* SelectLineContentsCommand.swift in Sources */,
 				BD292B6524742B53005A2F3C /* Character+Extensions.swift in Sources */,
 				BD292B6724742CA4005A2F3C /* SelectPreviousWordCommand.swift in Sources */,
@@ -298,6 +317,7 @@
 				BDFE8A4024743C9600E86A4C /* SmartSortCommand.swift in Sources */,
 				BDA96B9E2472FFB800565AA2 /* SelectNextWordCommand.swift in Sources */,
 				BDFE8A3924742BDB00E86A4C /* WordController.swift in Sources */,
+				BDEBA6A82474F17600EFA5B9 /* SelectWordAboveCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,16 +10,16 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
     defer { completionHandler(nil) }
 
     for case let selection as XCSourceTextRange in invocation.buffer.selections {
-      guard let stringArray = invocation.buffer.lines as? [String] else { continue }
+      guard let lines = invocation.buffer.lines as? [String] else { continue }
 
-      let lineCount = stringArray.count
+      let lineCount = lines.count
       let startLine = min(selection.start.line, lineCount - 1)
       let endLine = min(selection.end.line, lineCount - 1)
-      let currentLines = Array(stringArray[startLine...endLine])
+      let currentLines = Array(lines[startLine...endLine])
 
       if currentLines.count > 1 {
-        let startLineContents = stringArray[startLine]
-        let endLineContents = stringArray[endLine]
+        let startLineContents = lines[startLine]
+        let endLineContents = lines[endLine]
         let startCharacter: Character = startLineContents[selection.start.column]
         let endCharacter: Character = endLineContents[selection.end.column-1]
 
@@ -69,9 +69,8 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
 //          Swift.print("selectedContent: '\(selectedContent)'")
           Swift.print("\(#function):\(#line)")
         } else {
-          Swift.print("\(#function):\(#line)")
-//          sortLines(startLine: startLine, endLine: endLine,
-//                    lines: currentLines, buffer: invocation.buffer)
+          sortLines(startLine: startLine, endLine: endLine,
+                    lines: currentLines, buffer: invocation.buffer)
         }
       }
     }
