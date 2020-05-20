@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDA96B952472FFB800565AA2"
-               BuildableName = "ZenCode-XcodeExtension.appex"
-               BlueprintName = "ZenCode-XcodeExtension"
+               BuildableName = "ZenCode.appex"
+               BlueprintName = "ZenCode"
                ReferencedContainer = "container:ZenCode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -30,8 +30,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDA96B7B2472FF8A00565AA2"
-               BuildableName = "ZenCode.app"
-               BlueprintName = "ZenCode"
+               BuildableName = "ZenCodeApp.app"
+               BlueprintName = "ZenCodeApp"
                ReferencedContainer = "container:ZenCode.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -63,8 +63,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDA96B7B2472FF8A00565AA2"
-            BuildableName = "ZenCode.app"
-            BlueprintName = "ZenCode"
+            BuildableName = "ZenCodeApp.app"
+            BlueprintName = "ZenCodeApp"
             ReferencedContainer = "container:ZenCode.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -81,8 +81,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDA96B7B2472FF8A00565AA2"
-            BuildableName = "ZenCode.app"
-            BlueprintName = "ZenCode"
+            BuildableName = "ZenCodeApp.app"
+            BlueprintName = "ZenCodeApp"
             ReferencedContainer = "container:ZenCode.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

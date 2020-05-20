@@ -1,6 +1,3 @@
-import AVFoundation
-import Cocoa
-import Foundation
 import XcodeKit
 
 class SmartSortCommand: NSObject, XCSourceEditorCommand {
@@ -86,27 +83,6 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
 
     for (offset, element) in result.enumerated() {
       buffer.lines[offset + startLine] = element
-    }
-  }
-}
-
-enum Delimiter: String {
-  case parenthesis = "("
-  case curly = "{"
-  case bracket = "["
-  case comma = ","
-  case semicolon = ";"
-
-  var counterDelimiter: String {
-    switch self {
-    case .parenthesis:
-      return ")"
-    case .curly:
-      return "}"
-    case .bracket:
-      return "]"
-    case .comma, .semicolon:
-      return ""
     }
   }
 }

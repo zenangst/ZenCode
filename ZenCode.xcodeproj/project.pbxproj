@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		BD292B6524742B53005A2F3C /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD292B6424742B53005A2F3C /* Character+Extensions.swift */; };
 		BD292B6724742CA4005A2F3C /* SelectPreviousWordCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD292B6624742CA4005A2F3C /* SelectPreviousWordCommand.swift */; };
+		BD4C983E2475270F002FB430 /* Delimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C983C247526F6002FB430 /* Delimiter.swift */; };
+		BD4C983F24752751002FB430 /* JoinLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C9839247526D1002FB430 /* JoinLineCommand.swift */; };
 		BDA96B802472FF8A00565AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B7F2472FF8A00565AA2 /* AppDelegate.swift */; };
 		BDA96B822472FF8A00565AA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B812472FF8A00565AA2 /* ContentView.swift */; };
 		BDA96B842472FF8B00565AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA96B832472FF8B00565AA2 /* Assets.xcassets */; };
@@ -17,7 +19,7 @@
 		BDA96B992472FFB800565AA2 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA96B982472FFB800565AA2 /* Cocoa.framework */; };
 		BDA96B9C2472FFB800565AA2 /* SourceEditorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B9B2472FFB800565AA2 /* SourceEditorExtension.swift */; };
 		BDA96B9E2472FFB800565AA2 /* SelectNextWordCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B9D2472FFB800565AA2 /* SelectNextWordCommand.swift */; };
-		BDA96BA32472FFB800565AA2 /* ZenCode-XcodeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDA96B962472FFB800565AA2 /* ZenCode-XcodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		BDA96BA32472FFB800565AA2 /* ZenCode.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = BDA96B962472FFB800565AA2 /* ZenCode.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		BDEBA6A82474F17600EFA5B9 /* SelectWordAboveCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6A72474F17600EFA5B9 /* SelectWordAboveCommand.swift */; };
 		BDEBA6AA2474F1A500EFA5B9 /* SelectWordBelowCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6A92474F1A500EFA5B9 /* SelectWordBelowCommand.swift */; };
 		BDEBA6AC2474F1B700EFA5B9 /* DuplicateLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AB2474F1B700EFA5B9 /* DuplicateLineCommand.swift */; };
@@ -46,7 +48,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				BDA96BA32472FFB800565AA2 /* ZenCode-XcodeExtension.appex in Embed App Extensions */,
+				BDA96BA32472FFB800565AA2 /* ZenCode.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +58,9 @@
 /* Begin PBXFileReference section */
 		BD292B6424742B53005A2F3C /* Character+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extensions.swift"; sourceTree = "<group>"; };
 		BD292B6624742CA4005A2F3C /* SelectPreviousWordCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPreviousWordCommand.swift; sourceTree = "<group>"; };
-		BDA96B7C2472FF8A00565AA2 /* ZenCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD4C9839247526D1002FB430 /* JoinLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinLineCommand.swift; sourceTree = "<group>"; };
+		BD4C983C247526F6002FB430 /* Delimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delimiter.swift; sourceTree = "<group>"; };
+		BDA96B7C2472FF8A00565AA2 /* ZenCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA96B7F2472FF8A00565AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDA96B812472FF8A00565AA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDA96B832472FF8B00565AA2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		BDA96B892472FF8B00565AA2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDA96B8B2472FF8B00565AA2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDA96B8C2472FF8B00565AA2 /* ZenCode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ZenCode.entitlements; sourceTree = "<group>"; };
-		BDA96B962472FFB800565AA2 /* ZenCode-XcodeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "ZenCode-XcodeExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDA96B962472FFB800565AA2 /* ZenCode.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ZenCode.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA96B982472FFB800565AA2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BDA96B9B2472FFB800565AA2 /* SourceEditorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceEditorExtension.swift; sourceTree = "<group>"; };
 		BDA96B9D2472FFB800565AA2 /* SelectNextWordCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectNextWordCommand.swift; sourceTree = "<group>"; };
@@ -100,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD4C983B247526EA002FB430 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				BD4C983C247526F6002FB430 /* Delimiter.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
 		BDA96B732472FF8A00565AA2 = {
 			isa = PBXGroup;
 			children = (
@@ -113,8 +125,8 @@
 		BDA96B7D2472FF8A00565AA2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDA96B7C2472FF8A00565AA2 /* ZenCode.app */,
-				BDA96B962472FFB800565AA2 /* ZenCode-XcodeExtension.appex */,
+				BDA96B7C2472FF8A00565AA2 /* ZenCodeApp.app */,
+				BDA96B962472FFB800565AA2 /* ZenCode.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +164,7 @@
 		BDA96B9A2472FFB800565AA2 /* ZenCode-XcodeExtension */ = {
 			isa = PBXGroup;
 			children = (
+				BD4C983B247526EA002FB430 /* Enums */,
 				BDFE8A3E24743C5C00E86A4C /* Controllers */,
 				BDFE8A3D24743C5400E86A4C /* Extensions */,
 				BDFE8A3C24743C3100E86A4C /* Commands */,
@@ -174,6 +187,7 @@
 				BDEBA6A72474F17600EFA5B9 /* SelectWordAboveCommand.swift */,
 				BDEBA6A92474F1A500EFA5B9 /* SelectWordBelowCommand.swift */,
 				BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */,
+				BD4C9839247526D1002FB430 /* JoinLineCommand.swift */,
 			);
 			path = Commands;
 			sourceTree = "<group>";
@@ -198,9 +212,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		BDA96B7B2472FF8A00565AA2 /* ZenCode */ = {
+		BDA96B7B2472FF8A00565AA2 /* ZenCodeApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDA96B8F2472FF8B00565AA2 /* Build configuration list for PBXNativeTarget "ZenCode" */;
+			buildConfigurationList = BDA96B8F2472FF8B00565AA2 /* Build configuration list for PBXNativeTarget "ZenCodeApp" */;
 			buildPhases = (
 				BDA96B782472FF8A00565AA2 /* Sources */,
 				BDA96B792472FF8A00565AA2 /* Frameworks */,
@@ -212,14 +226,14 @@
 			dependencies = (
 				BDA96BA22472FFB800565AA2 /* PBXTargetDependency */,
 			);
-			name = ZenCode;
+			name = ZenCodeApp;
 			productName = ZenCode;
-			productReference = BDA96B7C2472FF8A00565AA2 /* ZenCode.app */;
+			productReference = BDA96B7C2472FF8A00565AA2 /* ZenCodeApp.app */;
 			productType = "com.apple.product-type.application";
 		};
-		BDA96B952472FFB800565AA2 /* ZenCode-XcodeExtension */ = {
+		BDA96B952472FFB800565AA2 /* ZenCode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDA96BA42472FFB800565AA2 /* Build configuration list for PBXNativeTarget "ZenCode-XcodeExtension" */;
+			buildConfigurationList = BDA96BA42472FFB800565AA2 /* Build configuration list for PBXNativeTarget "ZenCode" */;
 			buildPhases = (
 				BDA96B922472FFB800565AA2 /* Sources */,
 				BDA96B932472FFB800565AA2 /* Frameworks */,
@@ -229,9 +243,9 @@
 			);
 			dependencies = (
 			);
-			name = "ZenCode-XcodeExtension";
+			name = ZenCode;
 			productName = "ZenCode-XcodeExtension";
-			productReference = BDA96B962472FFB800565AA2 /* ZenCode-XcodeExtension.appex */;
+			productReference = BDA96B962472FFB800565AA2 /* ZenCode.appex */;
 			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
@@ -265,8 +279,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDA96B7B2472FF8A00565AA2 /* ZenCode */,
-				BDA96B952472FFB800565AA2 /* ZenCode-XcodeExtension */,
+				BDA96B7B2472FF8A00565AA2 /* ZenCodeApp */,
+				BDA96B952472FFB800565AA2 /* ZenCode */,
 			);
 		};
 /* End PBXProject section */
@@ -311,11 +325,13 @@
 				BDEBA6AA2474F1A500EFA5B9 /* SelectWordBelowCommand.swift in Sources */,
 				BDEBA6B02474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift in Sources */,
 				BDFE8A4224743CBA00E86A4C /* SelectLineContentsCommand.swift in Sources */,
+				BD4C983F24752751002FB430 /* JoinLineCommand.swift in Sources */,
 				BD292B6524742B53005A2F3C /* Character+Extensions.swift in Sources */,
 				BD292B6724742CA4005A2F3C /* SelectPreviousWordCommand.swift in Sources */,
 				BDA96B9C2472FFB800565AA2 /* SourceEditorExtension.swift in Sources */,
 				BDFE8A4024743C9600E86A4C /* SmartSortCommand.swift in Sources */,
 				BDA96B9E2472FFB800565AA2 /* SelectNextWordCommand.swift in Sources */,
+				BD4C983E2475270F002FB430 /* Delimiter.swift in Sources */,
 				BDFE8A3924742BDB00E86A4C /* WordController.swift in Sources */,
 				BDEBA6A82474F17600EFA5B9 /* SelectWordAboveCommand.swift in Sources */,
 			);
@@ -326,7 +342,7 @@
 /* Begin PBXTargetDependency section */
 		BDA96BA22472FFB800565AA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BDA96B952472FFB800565AA2 /* ZenCode-XcodeExtension */;
+			target = BDA96B952472FFB800565AA2 /* ZenCode */;
 			targetProxy = BDA96BA12472FFB800565AA2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -558,7 +574,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDA96B8F2472FF8B00565AA2 /* Build configuration list for PBXNativeTarget "ZenCode" */ = {
+		BDA96B8F2472FF8B00565AA2 /* Build configuration list for PBXNativeTarget "ZenCodeApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDA96B902472FF8B00565AA2 /* Debug */,
@@ -567,7 +583,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDA96BA42472FFB800565AA2 /* Build configuration list for PBXNativeTarget "ZenCode-XcodeExtension" */ = {
+		BDA96BA42472FFB800565AA2 /* Build configuration list for PBXNativeTarget "ZenCode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDA96BA52472FFB800565AA2 /* Debug */,

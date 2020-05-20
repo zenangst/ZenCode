@@ -96,4 +96,36 @@ class WordController {
 
     return (column: column, line: startLine, currentScope)
   }
+
+  func findNextNonWhitespace(startLine: inout Int, endLine: inout Int,
+                             column: inout Int, contents: [String]) -> (column: Int, line: Int, currentScope: String) {
+    var currentScope = contents[startLine...endLine].joined()
+    let upperbounds = currentScope.count
+    var currentLetter: Character = currentScope[column]
+      var foundWordStart = false
+    while !foundWordStart {
+      if column >= upperbounds {
+        column = 0
+        if startLine + 1 == contents.count {
+          foundWordStart = true
+        } else {
+          startLine += 1
+          endLine += 1
+          let ctx = findNextNonWhitespace(startLine: &startLine, endLine: &endLine,
+                                 column: &column, contents: contents)
+          currentScope = ctx.currentScope
+          foundWordStart = true
+        }
+      } else {
+        currentLetter = currentScope[column]
+        if !currentLetter.isWhitespace {
+          foundWordStart = true
+        } else {
+          column += 1
+        }
+      }
+    }
+
+    return (column: column, line: startLine, currentScope)
+  }
 }
