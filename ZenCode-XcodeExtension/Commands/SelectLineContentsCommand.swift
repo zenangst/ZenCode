@@ -42,7 +42,7 @@ class SelectLineContentsCommand : NSObject, XCSourceEditorCommand {
         break
       } else {
         let character: Character = scope[start]
-        if character.isValidCharacter {
+        if !character.isWhitespace {
           foundWordBondary = true
           break
         }
