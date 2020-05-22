@@ -30,84 +30,84 @@
 			<array>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).DeleteLineCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).DeleteLineCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Delete Line</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).DuplicateLineCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).DuplicateLineCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Duplicate Line</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).JoinLineCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).JoinLineCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Join Line</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).MoveToEOLAndInsertLFCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).MoveToEOLAndInsertLFCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Move To EOL and Insert LF</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SelectLineContentsCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectLineContentsCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Select Line Contents</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
 					<string>$(PRODUCT_MODULE_NAME).SelectPreviousWordCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
 					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectPreviousWordCommand</string>
 					<key>XCSourceEditorCommandName</key>
 					<string>Select Previous Word</string>
 				</dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).SelectNextWordCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectNextWordCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Select Next Word</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).SelectLineContentsCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectLineContentsCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Select Line Contents</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).SmartSortCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SmartSortCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Smart Sort</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).SelectWordAboveCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectWordAboveCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Select Word Above</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).SelectWordBelowCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectWordBelowCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Select Word Below</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).DuplicateLineCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).DuplicateLineCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Duplicate Line</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).DeleteLineCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).DeleteLineCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Delete Line</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).JoinLineCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).JoinLineCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Join Line</string>
-        </dict>
-        <dict>
-          <key>XCSourceEditorCommandClassName</key>
-          <string>$(PRODUCT_MODULE_NAME).MoveToEOLAndInsertLFCommand</string>
-          <key>XCSourceEditorCommandIdentifier</key>
-          <string>$(PRODUCT_BUNDLE_IDENTIFIER).MoveToEOLAndInsertLFCommand</string>
-          <key>XCSourceEditorCommandName</key>
-          <string>Move To EOL and Insert LF</string>
-        </dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SelectNextWordCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectNextWordCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Select Next Word</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SmartSortCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SmartSortCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Smart Sort</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SelectWordAboveCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectWordAboveCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Select Word Above</string>
+				</dict>
+				<dict>
+					<key>XCSourceEditorCommandClassName</key>
+					<string>$(PRODUCT_MODULE_NAME).SelectWordBelowCommand</string>
+					<key>XCSourceEditorCommandIdentifier</key>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SelectWordBelowCommand</string>
+					<key>XCSourceEditorCommandName</key>
+					<string>Select Word Below</string>
+				</dict>
 			</array>
 			<key>XCSourceEditorExtensionPrincipalClass</key>
 			<string>$(PRODUCT_MODULE_NAME).SourceEditorExtension</string>
