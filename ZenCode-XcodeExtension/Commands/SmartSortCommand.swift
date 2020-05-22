@@ -59,12 +59,24 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
               newString.append("\(line)\(suffix)")
             }
 
-            Swift.print(newString)
+            let result = "\(delimiter.rawValue)\(newString)\(delimiter.counterDelimiter)"
+            var lineSuffix: String = ""
+            for index in (selection.start.line...selection.end.line).reversed() {
+              guard let line = invocation.buffer.lines[index] as? String else {
+                continue
+              }
+
+              if index == selection.start.line {
+                let linePrefix = line[line.startIndex...line.index(line.startIndex, offsetBy: selection.start.column - 1)]
+                invocation.buffer.lines[index] = "\(linePrefix)\(result)\(lineSuffix)"
+              } else if index == selection.end.line {
+                lineSuffix = String(line[line.index(line.startIndex, offsetBy: selection.end.column)..<line.endIndex])
+                invocation.buffer.lines.removeObject(at: index)
+              } else {
+                invocation.buffer.lines.removeObject(at: index)
+              }
+            }
           }
-//
-//          Swift.print("delimiterCollection: '\(collection)'")
-//          Swift.print("selectedContent: '\(selectedContent)'")
-          Swift.print("\(#function):\(#line)")
         } else {
           sortLines(startLine: startLine, endLine: endLine,
                     lines: currentLines, buffer: invocation.buffer)

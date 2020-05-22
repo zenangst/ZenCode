@@ -24,7 +24,6 @@ class MoveToEOLAndInsertLFCommand : NSObject, XCSourceEditorCommand {
       }
 
       invocation.buffer.lines.insert("\(padding)", at: selection.end.line + 1)
-
       selection.start.line += 1
       selection.start.column = padding.count
       selection.end = selection.start
