@@ -1,7 +1,7 @@
 import Foundation
 import XcodeKit
 
-class WordController {
+class SelectionController {
   func findWordBoundaries(start: inout Int, modifier: (inout Int) -> Void, scope: String) {
     var foundWordBondary = false
     while !foundWordBondary {

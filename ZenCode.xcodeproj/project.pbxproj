@@ -25,7 +25,7 @@
 		BDEBA6AC2474F1B700EFA5B9 /* DuplicateLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AB2474F1B700EFA5B9 /* DuplicateLineCommand.swift */; };
 		BDEBA6AE2474F1D700EFA5B9 /* DeleteLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AD2474F1D700EFA5B9 /* DeleteLineCommand.swift */; };
 		BDEBA6B02474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDEBA6AF2474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift */; };
-		BDFE8A3924742BDB00E86A4C /* WordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3824742BDB00E86A4C /* WordController.swift */; };
+		BDFE8A3924742BDB00E86A4C /* SelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3824742BDB00E86A4C /* SelectionController.swift */; };
 		BDFE8A3B24742C0000E86A4C /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3A24742C0000E86A4C /* String+Extensions.swift */; };
 		BDFE8A4024743C9600E86A4C /* SmartSortCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */; };
 		BDFE8A4224743CBA00E86A4C /* SelectLineContentsCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */; };
@@ -79,7 +79,7 @@
 		BDEBA6AB2474F1B700EFA5B9 /* DuplicateLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuplicateLineCommand.swift; sourceTree = "<group>"; };
 		BDEBA6AD2474F1D700EFA5B9 /* DeleteLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteLineCommand.swift; sourceTree = "<group>"; };
 		BDEBA6AF2474F1FD00EFA5B9 /* MoveToEOLAndInsertLFCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveToEOLAndInsertLFCommand.swift; sourceTree = "<group>"; };
-		BDFE8A3824742BDB00E86A4C /* WordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordController.swift; sourceTree = "<group>"; };
+		BDFE8A3824742BDB00E86A4C /* SelectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionController.swift; sourceTree = "<group>"; };
 		BDFE8A3A24742C0000E86A4C /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
 		BDFE8A3F24743C9600E86A4C /* SmartSortCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartSortCommand.swift; sourceTree = "<group>"; };
 		BDFE8A4124743CBA00E86A4C /* SelectLineContentsCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectLineContentsCommand.swift; sourceTree = "<group>"; };
@@ -204,7 +204,7 @@
 		BDFE8A3E24743C5C00E86A4C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BDFE8A3824742BDB00E86A4C /* WordController.swift */,
+				BDFE8A3824742BDB00E86A4C /* SelectionController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -332,7 +332,7 @@
 				BDFE8A4024743C9600E86A4C /* SmartSortCommand.swift in Sources */,
 				BDA96B9E2472FFB800565AA2 /* SelectNextWordCommand.swift in Sources */,
 				BD4C983E2475270F002FB430 /* Delimiter.swift in Sources */,
-				BDFE8A3924742BDB00E86A4C /* WordController.swift in Sources */,
+				BDFE8A3924742BDB00E86A4C /* SelectionController.swift in Sources */,
 				BDEBA6A82474F17600EFA5B9 /* SelectWordAboveCommand.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
