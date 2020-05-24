@@ -2,7 +2,7 @@ import Foundation
 import XcodeKit
 
 class JoinLineCommand : NSObject, XCSourceEditorCommand {
-  let wordController = SelectionController()
+  let selectionController = SelectionController()
 
   func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
     defer { completionHandler(nil) }
@@ -24,9 +24,9 @@ class JoinLineCommand : NSObject, XCSourceEditorCommand {
 
       startColumn = min(selection.start.column, max(currentScope.count-1,0))
 
-      let ctx = wordController.findNextNonWhitespace(startLine: &startLine,
-                                                     endLine: &endLine, column: &startColumn,
-                                                     contents: lines)
+      let ctx = selectionController.findNextNonWhitespace(startLine: &startLine,
+                                                       endLine: &endLine, column: &startColumn,
+                                                       contents: lines)
       startColumn = ctx.column
       startLine = ctx.line
 

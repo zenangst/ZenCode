@@ -2,7 +2,7 @@ import Foundation
 import XcodeKit
 
 class SelectLineContentsCommand : NSObject, XCSourceEditorCommand {
-  let wordController = SelectionController()
+  let selectionController = SelectionController()
 
   func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
     defer { completionHandler(nil) }

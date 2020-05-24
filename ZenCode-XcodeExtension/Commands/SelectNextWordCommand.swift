@@ -2,7 +2,7 @@ import Foundation
 import XcodeKit
 
 class SelectNextWordCommand: NSObject, XCSourceEditorCommand {
-  let wordController = SelectionController()
+  let selectionController = SelectionController()
 
   func perform(with invocation: XCSourceEditorCommandInvocation, completionHandler: @escaping (Error?) -> Void ) -> Void {
     defer { completionHandler(nil) }
@@ -35,7 +35,7 @@ class SelectNextWordCommand: NSObject, XCSourceEditorCommand {
     var shouldFindNextWord = !startWord.isValidCharacter
     if startWord.isValidCharacter {
       if startColumn > 0 {
-        selectWord(in: currentScope, startColumn: &startColumn, endColumn: &endColumn)
+        selectionController.selectWord(in: currentScope, startColumn: &startColumn, endColumn: &endColumn)
       }
       if startColumn == selection.start.column && endColumn == selection.end.column {
         startColumn = endColumn
@@ -44,23 +44,16 @@ class SelectNextWordCommand: NSObject, XCSourceEditorCommand {
     }
 
     if shouldFindNextWord {
-      let ctx = wordController.findNextWord(startLine: &startLine,
-                             endLine: &endLine, column: &startColumn,
-                             contents: lines)
+      let ctx = selectionController.findNextWord(startLine: &startLine,
+                                              endLine: &endLine, column: &startColumn,
+                                              contents: lines)
       startColumn = ctx.column
       endColumn = ctx.column
       startLine = ctx.line
 
-      selectWord(in: ctx.currentScope, startColumn: &startColumn, endColumn: &endColumn)
+      selectionController.selectWord(in: ctx.currentScope, startColumn: &startColumn, endColumn: &endColumn)
     }
 
     return (startLine: startLine, startColumn: startColumn, endColumn: endColumn)
-  }
-
-  func selectWord(in currentScope: String, startColumn: inout Int, endColumn: inout Int) {
-    wordController.findWordBoundaries(start: &startColumn, modifier: { $0 -= 1 }, scope: currentScope)
-    startColumn += 1
-    endColumn = startColumn
-    wordController.findWordBoundaries(start: &endColumn, modifier: { $0 += 1 }, scope: currentScope)
   }
 }

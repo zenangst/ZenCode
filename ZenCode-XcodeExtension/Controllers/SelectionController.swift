@@ -28,7 +28,13 @@ class SelectionController {
   func findPreviousWord(startLine: inout Int, endLine: inout Int,
                         column: inout Int, contents: [String]) -> (column: Int, line: Int, currentScope: String) {
     var currentScope = contents[startLine...endLine].joined()
+    let padding = self.padding(in: currentScope, startColumn: column)
+    if padding > 0 {
+      column -= padding + 1
+    }
+
     var currentLetter: Character = currentScope[column]
+
     if !currentLetter.isValidCharacter {
       var foundWordStart = false
       while !foundWordStart {
@@ -127,5 +133,30 @@ class SelectionController {
     }
 
     return (column: column, line: startLine, currentScope)
+  }
+
+  func selectWord(in currentScope: String, startColumn: inout Int, endColumn: inout Int) {
+    findWordBoundaries(start: &startColumn, modifier: { $0 -= 1 }, scope: currentScope)
+    let currentChar: Character = currentScope[startColumn]
+    if !currentChar.isValidCharacter {
+      startColumn += 1
+    }
+    endColumn = startColumn
+    findWordBoundaries(start: &endColumn, modifier: { $0 += 1 }, scope: currentScope)
+
+    let padding = self.padding(in: currentScope, startColumn: startColumn)
+    startColumn += padding
+    endColumn += padding
+  }
+
+  func padding(in scope: String, startColumn: Int) -> Int {
+    var padding = 0
+    for x in 0..<startColumn {
+      let character: Character = scope[x]
+      if character.isEmoji {
+        padding += 1
+      }
+    }
+    return padding
   }
 }
