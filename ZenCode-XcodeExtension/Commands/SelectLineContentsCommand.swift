@@ -31,6 +31,9 @@ class SelectLineContentsCommand : NSObject, XCSourceEditorCommand {
     findBoundaries(start: &startColumn, modifier: { $0 += 1 }, scope: lines[startLine])
     findBoundaries(start: &endColumn, modifier: { $0 -= 1 }, scope: lines[endLine])
 
+    let padding = selectionController.padding(in: lines[endLine], startColumn: endColumn)
+    endColumn += padding
+
     return (startLine: startLine, startColumn: startColumn, endLine: endLine, endColumn: endColumn)
   }
 
