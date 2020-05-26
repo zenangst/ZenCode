@@ -86,11 +86,11 @@
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>
-					<string>$(PRODUCT_MODULE_NAME).SmartSortCommand</string>
+					<string>$(PRODUCT_MODULE_NAME).MagicSortCommand</string>
 					<key>XCSourceEditorCommandIdentifier</key>
-					<string>$(PRODUCT_BUNDLE_IDENTIFIER).SmartSortCommand</string>
+					<string>$(PRODUCT_BUNDLE_IDENTIFIER).MagicSortCommand</string>
 					<key>XCSourceEditorCommandName</key>
-					<string>Smart Sort</string>
+					<string>Magic Sort</string>
 				</dict>
 				<dict>
 					<key>XCSourceEditorCommandClassName</key>

@@ -2,7 +2,7 @@ import Cocoa
 import Foundation
 import XcodeKit
 
-class SmartSortCommand: NSObject, XCSourceEditorCommand {
+class MagicSortCommand: NSObject, XCSourceEditorCommand {
   let selectionController = SelectionController()
 
 
@@ -20,7 +20,7 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
       let startLineContents = lines[startLine]
       let endLineContents = lines[endLine]
       let startCharacter: Character = startLineContents[selection.start.column]
-      let endCharacter: Character = endLineContents[selection.end.column-1]
+      let endCharacter: Character = endLineContents[max(selection.end.column-1, 0)]
       let delimiter = Delimiter(rawValue: String(startCharacter))
       let delimiterMatch = delimiter?.counterDelimiter == String(endCharacter)
 
@@ -37,10 +37,6 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
                   lines: currentLines, buffer: invocation.buffer)
       }
     }
-  }
-
-  func dummyMethod(_ a: String, b: Int, c: Date) {
-
   }
 
   fileprivate func delimiterSortSingleLine(_ currentLine: String,
@@ -60,6 +56,7 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
 
   fileprivate func delimiterSortMultipleLines(_ currentLines: [String], _ selection: XCSourceTextRange, _ delimiter: Delimiter, _ invocation: XCSourceEditorCommandInvocation) {
     var selectedContent: String = ""
+    var padding: Int = 0
 
     for (offset, line) in currentLines.enumerated() {
       if offset == 0 {
@@ -67,6 +64,7 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
       } else if offset == currentLines.count - 1 {
         selectedContent.append(line[0..<selection.end.column-1])
       } else {
+        padding = line.count - line.trimmingCharacters(in: .whitespaces).count
         selectedContent.append(line)
       }
     }
@@ -74,22 +72,28 @@ class SmartSortCommand: NSObject, XCSourceEditorCommand {
     let collection = collectDelimiters(selectedContent)
 
     if let matchedDelimiter = collection.sorted(by: { $0.1 > $1.1 }).first?.key {
-      let newString = sortContent(selectedContent, with: matchedDelimiter)
-      let result = "\(delimiter.rawValue)\(newString)\(delimiter.counterDelimiter)"
-      var lineSuffix: String = ""
+      let newLines = sortContent(selectedContent, with: matchedDelimiter).split(separator: Character(matchedDelimiter.rawValue))
+      var offset: Int = newLines.count - 1
       for index in (selection.start.line...selection.end.line).reversed() {
+        defer { offset -= 1 }
         guard let line = invocation.buffer.lines[index] as? String else {
           continue
         }
 
+        let paddedLine = "".padding(toLength: padding, withPad: " ", startingAt: 0)
+        let trimmedLine = newLines[offset].trimmingCharacters(in: .whitespacesAndNewlines)
+
         if index == selection.start.line {
           let linePrefix = line[line.startIndex...line.index(line.startIndex, offsetBy: selection.start.column - 1)]
-          invocation.buffer.lines[index] = "\(linePrefix)\(result)\(lineSuffix)"
+          let newLine = "\(linePrefix)\(delimiter.rawValue)\(trimmedLine)\(matchedDelimiter.rawValue)"
+          invocation.buffer.lines[index] = newLine
         } else if index == selection.end.line {
-          lineSuffix = String(line[line.index(line.startIndex, offsetBy: selection.end.column)..<line.endIndex])
-          invocation.buffer.lines.removeObject(at: index)
+          let lineSuffix = String(line[line.index(line.startIndex, offsetBy: selection.end.column)..<line.endIndex])
+          let newLine = "\(paddedLine)\(trimmedLine)\(delimiter.counterDelimiter)\(lineSuffix)".trimmingCharacters(in: .newlines)
+          invocation.buffer.lines[index] = newLine
         } else {
-          invocation.buffer.lines.removeObject(at: index)
+          let newLine = "\(paddedLine)\(trimmedLine)\(matchedDelimiter.rawValue)"
+          invocation.buffer.lines[index] = newLine
         }
       }
     }
