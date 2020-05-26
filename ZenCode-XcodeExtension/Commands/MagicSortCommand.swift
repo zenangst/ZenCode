@@ -41,7 +41,9 @@ class MagicSortCommand: NSObject, XCSourceEditorCommand {
 
   fileprivate func delimiterSortSingleLine(_ currentLine: String,
                                            _ currentSelection: String,
-                                           _ selection: XCSourceTextRange, _ delimiter: Delimiter, _ invocation: XCSourceEditorCommandInvocation) {
+                                           _ selection: XCSourceTextRange,
+                                           _ delimiter: Delimiter,
+                                           _ invocation: XCSourceEditorCommandInvocation) {
     let collection = collectDelimiters(currentLine)
     if let matchedDelimiter = collection.sorted(by: { $0.1 > $1.1 }).first?.key {
       let sortedContent = sortContent(currentSelection, with: matchedDelimiter)
@@ -91,6 +93,7 @@ class MagicSortCommand: NSObject, XCSourceEditorCommand {
           let lineSuffix = String(line[line.index(line.startIndex, offsetBy: selection.end.column)..<line.endIndex])
           let newLine = "\(paddedLine)\(trimmedLine)\(delimiter.counterDelimiter)\(lineSuffix)".trimmingCharacters(in: .newlines)
           invocation.buffer.lines[index] = newLine
+          selection.end.column = newLine.count - lineSuffix.count + 1
         } else {
           let newLine = "\(paddedLine)\(trimmedLine)\(matchedDelimiter.rawValue)"
           invocation.buffer.lines[index] = newLine
