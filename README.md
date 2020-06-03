@@ -3,7 +3,7 @@
 
 ### Installing
 
-(Proper signed releases will be available in the future under GitHub releases)
+(Properly signed releases will be available in the future under GitHub releases)
 
 - Download and build the source code
 - Run the bundled application
@@ -47,9 +47,6 @@ use of a mouse for it, we are programmers after all.
 
 ### Sorting
 
-If there is one thing that is tiedious and nonsensicall it has to be manually sorting lists
-that clearly should just be order acending or decending. This is where Magic Sort comes in.
-What makes it magical is the way it figures out your current context on what you are trying to sort. If it just a plain list or if is a delimiter scope such as the contents of a function declaration.
-If you try to sort something that is already sorted, it will simply reverse the current order which eliminates the need for multiple commands (think of it like a toggle).
+If there is one thing that is tedious and nonsensical it has to be manually sorting lists that clearly should just order ascending or descending. This is where Magic Sort comes in. What makes it magical is the way it figures out your current context on what you are trying to sort. If it just a plain list or if is a delimiter scope such as the contents of a function declaration. If you try to sort something that is already sorted, it will simply reverse the current order which eliminates the need for multiple commands (think of it as a toggle).
 
 - Magic Sort (beta)
