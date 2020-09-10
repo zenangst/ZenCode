@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0D547A24898688001FCC98 /* SystemPreferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0D547924898688001FCC98 /* SystemPreferenceController.swift */; };
 		BD292B6524742B53005A2F3C /* Character+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD292B6424742B53005A2F3C /* Character+Extensions.swift */; };
 		BD292B6724742CA4005A2F3C /* SelectPreviousWordCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD292B6624742CA4005A2F3C /* SelectPreviousWordCommand.swift */; };
 		BD4C983E2475270F002FB430 /* Delimiter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C983C247526F6002FB430 /* Delimiter.swift */; };
 		BD4C983F24752751002FB430 /* JoinLineCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C9839247526D1002FB430 /* JoinLineCommand.swift */; };
+		BD7D06EE24A364D3009C91CA /* XcodeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD7D06ED24A364D3009C91CA /* XcodeKit.framework */; };
+		BD7D06EF24A364D3009C91CA /* XcodeKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD7D06ED24A364D3009C91CA /* XcodeKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDA96B802472FF8A00565AA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B7F2472FF8A00565AA2 /* AppDelegate.swift */; };
 		BDA96B822472FF8A00565AA2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA96B812472FF8A00565AA2 /* ContentView.swift */; };
 		BDA96B842472FF8B00565AA2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA96B832472FF8B00565AA2 /* Assets.xcassets */; };
@@ -42,6 +45,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		BD7D06F024A364D3009C91CA /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BD7D06EF24A364D3009C91CA /* XcodeKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDA96BA72472FFB800565AA2 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,10 +70,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD0D547924898688001FCC98 /* SystemPreferenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemPreferenceController.swift; sourceTree = "<group>"; };
 		BD292B6424742B53005A2F3C /* Character+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Extensions.swift"; sourceTree = "<group>"; };
 		BD292B6624742CA4005A2F3C /* SelectPreviousWordCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPreviousWordCommand.swift; sourceTree = "<group>"; };
 		BD4C9839247526D1002FB430 /* JoinLineCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinLineCommand.swift; sourceTree = "<group>"; };
 		BD4C983C247526F6002FB430 /* Delimiter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delimiter.swift; sourceTree = "<group>"; };
+		BD7D06ED24A364D3009C91CA /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		BDA96B7C2472FF8A00565AA2 /* ZenCodeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZenCodeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA96B7F2472FF8A00565AA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDA96B812472FF8A00565AA2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -98,6 +114,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDA96B992472FFB800565AA2 /* Cocoa.framework in Frameworks */,
+				BD7D06EE24A364D3009C91CA /* XcodeKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +158,7 @@
 				BDA96B8B2472FF8B00565AA2 /* Info.plist */,
 				BDA96B8C2472FF8B00565AA2 /* ZenCode.entitlements */,
 				BDA96B852472FF8B00565AA2 /* Preview Content */,
+				BD0D547924898688001FCC98 /* SystemPreferenceController.swift */,
 			);
 			path = ZenCode;
 			sourceTree = "<group>";
@@ -156,6 +174,7 @@
 		BDA96B972472FFB800565AA2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BD7D06ED24A364D3009C91CA /* XcodeKit.framework */,
 				BDA96B982472FFB800565AA2 /* Cocoa.framework */,
 			);
 			name = Frameworks;
@@ -238,6 +257,7 @@
 				BDA96B922472FFB800565AA2 /* Sources */,
 				BDA96B932472FFB800565AA2 /* Frameworks */,
 				BDA96B942472FFB800565AA2 /* Resources */,
+				BD7D06F024A364D3009C91CA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -310,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0D547A24898688001FCC98 /* SystemPreferenceController.swift in Sources */,
 				BDA96B822472FF8A00565AA2 /* ContentView.swift in Sources */,
 				BDA96B802472FF8A00565AA2 /* AppDelegate.swift in Sources */,
 			);
